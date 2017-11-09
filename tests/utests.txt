@@ -1,0 +1,19 @@
+Running suite(s): Default
+5%: Checks: 18, Failures: 17, Errors: 0
+public.c:23:F:Public:C_error_decode_NULL_cond_valA:0: Assertion 'cpu.stat == INS' failed
+public.c:44:F:Public:C_func_decode_halt:0: Assertion 'cpu.stat == HLT' failed
+public.c:114:F:Public:C_func_decode_irmovq:0: Assertion 'valE == (y86_register_t)inst.value' failed
+public.c:191:F:Public:C_func_decode_opq:0: Assertion 'valE == expected_valE' failed
+public.c:244:F:Public:C_error_decode_invalid_opq:0: Assertion 'cpu.stat == INS' failed
+private.c:100:F:Private:B_func_decode_rmmovq:0: Assertion 'valA == expected_valA' failed
+private.c:194:F:Private:B_func_decode_mrmovq:0: Assertion 'valE == expected_valE' failed
+private.c:225:F:Private:B_func_decode_pushq:0: Assertion 'valE == regs[RSP] - 8' failed
+private.c:257:F:Private:B_func_decode_popq:0: Assertion 'valE == regs[RSP] + 8' failed
+private.c:525:F:Private:B_error_memory_mrmovq_bad_memory_address:0: Assertion 'cpu.stat == ADR' failed
+private.c:305:F:Private:A_func_decode_cmov:0: Assertion 'valE == expected_valE' failed
+private.c:368:F:Private:A_func_decode_jump:0: Assertion 'cond == expected_cond[jump][0]' failed
+private.c:413:F:Private:A_func_decode_call:0: Assertion 'valE == regs[RSP] - 8' failed
+private.c:444:F:Private:A_func_decode_ret:0: Assertion 'valE == regs[RSP] + 8' failed
+private.c:464:F:Private:A_error_decode_invalid_optype:0: Assertion 'cpu.stat == INS' failed
+private.c:484:F:Private:A_error_decode_invalid_cmov:0: Assertion 'cpu.stat == INS' failed
+private.c:504:F:Private:A_error_decode_invalid_jump:0: Assertion 'cpu.stat == INS' failed
